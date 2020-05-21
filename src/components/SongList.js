@@ -18,7 +18,6 @@ class SongList extends Component {
   render() {
     return <div>
         <div className="ui divided list">{this.renderList()}</div>
-        <div>{this.props.selectedSong.title}</div>
     </div>;
   }
 }
@@ -26,7 +25,6 @@ class SongList extends Component {
 const mstp = state => {
   return {
     songs: state.songs,
-    selectedSong:state.selectedSong
   };
 };
 export default connect(mstp, { selectSong })(SongList);
